@@ -1,11 +1,14 @@
+import AIChat from "@/components/AIChat";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Optional: Add some subtle animated background elements */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
       
-      <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto w-full max-w-4xl text-center">
+      <main className="relative z-10 flex min-h-screen flex-col px-4 py-8 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div className="mx-auto mb-12 w-full max-w-4xl text-center sm:mb-16 lg:mb-20">
           {/* Main Title */}
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             AI Trading Backtester
@@ -29,6 +32,11 @@ export default function Home() {
               View Demo
             </button>
           </div>
+        </div>
+
+        {/* AI Chat Component */}
+        <div className="mx-auto w-full max-w-5xl">
+          <AIChat />
         </div>
       </main>
     </div>
