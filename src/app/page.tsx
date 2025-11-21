@@ -1,6 +1,8 @@
 import AIChat from "@/components/AIChat";
 import Navigation from "@/components/Navigation";
 import Features from "@/components/Features";
+import StrategyBuilder from '@/components/StrategyBuilder';
+
 
 export default function Home() {
   return (
@@ -9,9 +11,22 @@ export default function Home() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
       
       <Navigation />
-      <Features />
 
       <main className="relative z-10 flex min-h-screen flex-col px-4 py-8 sm:px-6 lg:px-8">
+        <Features />
+        <div className="py-16 bg-gradient-to-b from-blue-900 to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                Strategy Builder
+              </h2>
+              <p className="mt-4 text-xl text-gray-300">
+                Drag and drop indicators to create your trading strategy
+              </p>
+            </div>
+            <StrategyBuilder />
+          </div>
+        </div>
         {/* Hero Section */}
         <div className="mx-auto mb-12 w-full max-w-4xl text-center sm:mb-16 lg:mb-20">
           {/* Main Title */}
