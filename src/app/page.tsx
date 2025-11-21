@@ -1,11 +1,16 @@
 import AIChat from "@/components/AIChat";
+import Navigation from "@/components/Navigation";
+import Features from "@/components/Features";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className="relative min-h-screen w-full overflow-visible bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Optional: Add some subtle animated background elements */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGMwIDIuMjA5LTEuNzkxIDQtNCA0cy00LTEuNzkxLTQtNCAxLjc5MS00IDQtNCA0IDEuNzkxIDQgNHoiIGZpbGw9IiNmZmYiIG9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-20"></div>
       
+      <Navigation />
+      <Features />
+
       <main className="relative z-10 flex min-h-screen flex-col px-4 py-8 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="mx-auto mb-12 w-full max-w-4xl text-center sm:mb-16 lg:mb-20">

@@ -19,7 +19,13 @@ export default function AIChat() {
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Sadece AI mesajı geldiğinde ve loading değilken scroll et
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage?.role === 'assistant' && !isLoading) {
+      setTimeout(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
   }, [messages, isLoading]);
 
   // Clear error when user starts typing
